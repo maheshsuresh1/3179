@@ -3,7 +3,8 @@
   "data": {
     "url": "data/Frog_Census_Records.csv",
     "format": {
-      "type": "csv"
+      "type": "csv",
+      "parse": {"Date": "date:'%Y/%m/%d %H:%M:%S%Z'"}
     }
   },
   "mark": "bar",
