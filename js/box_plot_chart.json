@@ -1,22 +1,10 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {
-    "url": "data/Frog_Census_Records.csv",
-    "format": {
-      "type": "csv"
-    }
-  },
-  "mark": "bar",
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {"url": "data/shanghai-world-university-ranking.csv"},
+  "mark": "line",
   "encoding": {
-    "x": {
-      "field": "Scientific_name",
-      "type": "nominal",
-      "axis": {"title": "Species of Frog"}
-    },
-    "y": {
-      "aggregate": "count",
-      "type": "quantitative",
-      "axis": {"title": "Number of Sightings"}
-    }
+    "x": {"field": "Year", "type": "temporal"},
+    "y": {"field": "Total Score", "type": "quantitative"},
+    "color": {"field": "University", "type": "nominal"}
   }
 }
