@@ -1,10 +1,11 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "data": {"url": "data/shanghai-world-university-ranking.csv"},
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "data/shanghai-world-university-ranking.csv"
+  },
   "mark": "bar",
   "encoding": {
     "x": {"field": "University", "type": "ordinal", "title": "University"},
-    "y": {"field": "Total score", "type": "quantitative", "title": "Total Score"},
-    "color": {"field": "University", "type": "nominal", "title": "University"}
-  }
+    "y": {"field": "Total score", "type": "quantitative", "title": "Total Score"}
+    }
 }
