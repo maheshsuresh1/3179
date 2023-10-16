@@ -1,24 +1,24 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
-    "url": "data/Frog_Census_Records.csv"
+    "url": "data/Frog_Census_Records.csv",
+    "format": {
+      "type": "csv"
+    }
   },
-  "mark": {
-    "type": "boxplot",
-    "extent": "min-max"
-  },
+  "mark": "bar",
   "encoding": {
     "x": {
       "field": "Type_of_observation",
-      "type": "ordinal",
+      "type": "nominal",
       "title": "Type of Observation"
     },
     "y": {
-      "field": "Number",
+      "aggregate": "count",
       "type": "quantitative",
-      "title": "Number of Observations"
+      "title": "Count"
     }
-  }
+  },
+  "width": 400,
+  "height": 300
 }
-
-
