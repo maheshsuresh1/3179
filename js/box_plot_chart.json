@@ -9,16 +9,14 @@
   "mark": "bar",
   "encoding": {
     "x": {
-      "field": "Type_of_observation",
+      "field": "Scientific_name",
       "type": "nominal",
-      "title": "Type of Observation"
+      "axis": {"title": "Species of Frog"}
     },
     "y": {
       "aggregate": "count",
       "type": "quantitative",
-      "title": "Count"
+      "axis": {"title": "Number of Sightings"}
     }
-  },
-  "width": 400,
-  "height": 300
+  }
 }
