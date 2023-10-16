@@ -8,7 +8,7 @@
   "layer": [
     {
       "data": {
-        "url": "data/us-10m.json",
+        "url": "data/map/us-10m.json",
         "format": {
           "type": "topojson",
           "feature": "states"
