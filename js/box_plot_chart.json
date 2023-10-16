@@ -4,22 +4,27 @@
     "url": "data/Frog_Census_Records.csv",
     "format": {
       "type": "csv",
-      "parse": {"Date": "date:'%Y/%m/%d %H:%M:%S%Z'"}
+      "parse": {"Date": "utc:'%Y/%m/%d %H:%M:%S%Z'"}
     }
   },
   "mark": "bar",
   "encoding": {
     "x": {
-      "field": "Type_of_observation",
-      "type": "nominal",
-      "title": "Type of Observation"
+      "field": "yearmonth(Date)",
+      "type": "temporal",
+      "axis": {"title": "Date"}
     },
     "y": {
       "aggregate": "count",
       "type": "quantitative",
       "title": "Count"
+    },
+    "color": {
+      "field": "Type_of_observation",
+      "type": "nominal",
+      "title": "Type of Observation"
     }
   },
-  "width": 400,
-  "height": 300
+  "width": 600,
+  "height": 400
 }
