@@ -6,7 +6,7 @@
     "mark": { "type": "bar" },
     "encoding": {
         "x": { "timeUnit": "yearmonth", "field": "date", "type": "ordinal", "title":null },
-        "y": { "aggregate": "sum", "field": "new_cases", "title": "Sun of New Cases" },
+        "y": { "aggregate": "sum", "field": "new_cases", "title": "CHANGED" },
         "color": { "field": "continent", "title": "Continent" }
     }
 }
