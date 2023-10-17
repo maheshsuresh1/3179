@@ -1,21 +1,19 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "https://raw.githubusercontent.com/maheshsuresh1/3179/main/data/top5_uni.csv"},
-  "params": [
-    {
-      "name": "university_highlight",
-      "select": {
-        "type": "point",
-        "fields": ["University"],
-        "bind": {
-          "input": "select",
-          "options": [null, "Harvard University", "Stanford University", "Massachusetts Institute of Technology (MIT)", "Princeton University", "Columbia University"],
-          "labels": ["Show All", "Harvard University", "Stanford University", "Massachusetts Institute of Technology (MIT)", "Princeton University", "Columbia University"],
-          "name": "University Selection: "
-        }
+  "selection": {
+    "uni_selector": {
+      "type": "single",
+      "fields": ["University"],
+      "bind": {
+        "input": "select",
+        "options": [null, "Harvard University", "Stanford University", "Massachusetts Institute of Technology (MIT)", "Princeton University", "Columbia University"],
+        "labels": ["Show All", "Harvard University", "Stanford University", "Massachusetts Institute of Technology (MIT)", "Princeton University", "Columbia University"],
+        "name": "University Selection: "
       }
     }
-  ],
+  },
+  "transform": [{"filter": {"selection": "uni_selector"}}],
   "mark": "line",
   "encoding": {
     "x": {
