@@ -42,3 +42,19 @@ body *{
   .small-font {
 	font-size: 14px;
   }
+
+  /* Table styling */
+
+  table {
+    border-collapse: collapse; /* Ensure that borders collapse to form a single border */
+    width: 100%; /* Set the table width to 100% of its container (optional) */
+  }
+
+  table, th, td {
+    border: 1px solid black; /* Add a 1px solid black border to the table, headers, and cells */
+  }
+
+  th, td {
+    padding: 8px; /* Add padding for better spacing */
+    text-align: left; /* Align text within cells (optional) */
+  }
