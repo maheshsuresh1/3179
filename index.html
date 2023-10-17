@@ -46,7 +46,7 @@
             consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien
             faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
         </div>
-        <div id="vis1" class="vis-container"></div>
+        <div id="map" class="vis-container"></div>
       </div>
     </div>
 
@@ -60,11 +60,9 @@
           <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat
             sed. Egestas purus viverra accumsan in nisl. Egestas purus viverra accumsan in nisl.</p>
-          <div id="vis3" class="vis-container"></div>
+          <div id="bar" class="vis-container"></div>
         </div>
       </div>
-
-
     </div>
     <!-- end pure grid group -->
 
@@ -105,25 +103,25 @@
 
 
 
-    vegaEmbed('#vis1', specVis1, {
+    vegaEmbed('#map', specVis1, {
       "actions": false
     }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    vegaEmbed('#vis2', specVis2, {
+    vegaEmbed('#bar', specVis2, {
       "actions": false
     }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    vegaEmbed('#vis3', specVis3, {
+    vegaEmbed('#scatter', specVis3, {
       "actions": false
     }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    vegaEmbed('#vis4', specVis4, {
+    vegaEmbed('#line', specVis4, {
       "actions": false
     }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
