@@ -1,6 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {"url": "https://raw.githubusercontent.com/maheshsuresh1/3179/main/data/top5_uni.csv"},
+  "width": 400,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/maheshsuresh1/3179/main/data/top5_uni.csv"
+  },
   "selection": {
     "uni_selector": {
       "type": "single",
@@ -13,23 +17,49 @@
       }
     }
   },
-  "transform": [{"filter": {"selection": "uni_selector"}}],
+  "transform": [{
+    "filter": {
+      "selection": "uni_selector"
+    }
+  }],
   "mark": "line",
   "encoding": {
     "x": {
       "field": "Year",
       "type": "temporal",
-      "axis": {"title": "Year"}
+      "axis": {
+        "title": "Year"
+      }
     },
     "y": {
       "field": "Alumni",
       "type": "quantitative",
-      "axis": {"title": "Value"}
+      "axis": {
+        "title": "Value"
+      }
     },
     "color": {
       "field": "University",
       "type": "nominal",
-      "legend": {"title": "University"}
-    }
+      "legend": {
+        "title": "University"
+      }
+    },
+    "tooltip": [{
+        "field": "Year",
+        "type": "temporal",
+        "title": "Year"
+      },
+      {
+        "field": "Alumni",
+        "type": "quantitative",
+        "title": "Alumni"
+      },
+      {
+        "field": "University",
+        "type": "nominal",
+        "title": "University"
+      }
+    ]
   }
 }
