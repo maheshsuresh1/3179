@@ -1,0 +1,70 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 600,
+  "title": "University Total Scores vs. PCP",
+  "data": {
+    "url": "https://raw.githubusercontent.com/maheshsuresh1/3179/main/data/top5_uni.csv"
+  },
+  "encoding": {
+    "x": {"field": "Year", "type": "temporal", "title": "Year"},
+    "y": {
+      "field": "PCP",
+      "type": "quantitative",
+      "title": "PCP",
+      "scale": {"zero": false, "domain": [30, 80]}
+    },
+    "size": {
+      "field": "Total score",
+      "type": "quantitative",
+      "title": "Total Score",
+      "scale": {"type": "log"}
+    }
+  },
+  "layer": [
+    {
+      "mark": "circle",
+      "encoding": {
+        "color": {
+          "field": "University",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Harvard University", "Stanford University", "Massachusetts Institute of Technology (MIT)", "Princeton University", "Columbia University"],
+            "range": ["#e41a1c", "#984ea3", "#ff7f00", "#a6cee3", "#377eb8"]
+          }
+        },
+        "opacity": {"value": 0.6},
+        "tooltip": [
+          {"field": "University", "type": "nominal"},
+          {"field": "PCP", "type": "quantitative"},
+          {"field": "Total score", "type": "quantitative"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -12,
+        "fontSize": 9,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+            "test": "datum['University'] == 'Harvard University' || datum['University'] == 'Stanford University' || datum['University'] == 'Massachusetts Institute of Technology (MIT)' || datum['University'] == 'Princeton University' || datum['University'] == 'Columbia University'",
+            "value": 1
+          },
+          "value": 0
+        },
+        "tooltip": [
+          {"field": "University", "type": "nominal"},
+          {"field": "PCP", "type": "quantitative"},
+          {"field": "Total score", "type": "quantitative"}
+        ]
+      }
+    }
+  ]
+}
