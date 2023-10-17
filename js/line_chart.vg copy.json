@@ -1,10 +1,20 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {
-    "url": "https://raw.githubusercontent.com/maheshsuresh1/3179/main/data/top5_uni.csv"
-  },
-  "transform": [
-    {"filter": "datum.Field === 'Alumni'"}
+  "data": {"url": "https://raw.githubusercontent.com/maheshsuresh1/3179/main/data/top5_uni.csv"},
+  "params": [
+    {
+      "name": "university_highlight",
+      "select": {
+        "type": "point",
+        "fields": ["University"],
+        "bind": {
+          "input": "select",
+          "options": [null, "Harvard University", "Stanford University", "Massachusetts Institute of Technology (MIT)", "Princeton University", "Columbia University"],
+          "labels": ["Show All", "Harvard University", "Stanford University", "Massachusetts Institute of Technology (MIT)", "Princeton University", "Columbia University"],
+          "name": "University Selection: "
+        }
+      }
+    }
   ],
   "mark": "line",
   "encoding": {
@@ -14,7 +24,7 @@
       "axis": {"title": "Year"}
     },
     "y": {
-      "field": "Value",
+      "field": "Alumni",
       "type": "quantitative",
       "axis": {"title": "Value"}
     },
@@ -22,13 +32,6 @@
       "field": "University",
       "type": "nominal",
       "legend": {"title": "University"}
-    }
-  },
-  "selection": {
-    "FieldSelector": {
-      "type": "single",
-      "fields": ["Alumni", "Award", "Hi Ci"],
-      "init": "Alumni"
     }
   }
 }
