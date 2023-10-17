@@ -11,7 +11,7 @@
       "field": "PCP",
       "type": "quantitative",
       "title": "PCP",
-      "scale": {"zero": false, "domain": [30, 80]}
+      "scale": {"zero": false, "domain": [0, 100]}
     },
     "size": {
       "field": "Total score",
