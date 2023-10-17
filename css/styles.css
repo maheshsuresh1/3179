@@ -42,3 +42,39 @@ body *{
   .small-font {
 	font-size: 14px;
   }
+
+  /* COLUMNS */
+
+  .pure-g {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .pure-u-1-2 {
+    display: inline-block;
+    width: 49%;
+    margin: 1%;
+    vertical-align: top;
+  }
+  
+  .left-column {
+    float: left;
+    text-align: left;
+  }
+  
+  .right-column {
+    float: right;
+    text-align: right;
+  }
+  
+  .description {
+    border: 1px solid #ddd;
+    padding: 20px;
+  }
+  
+  .vis-container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 10px;
+  }
+  
