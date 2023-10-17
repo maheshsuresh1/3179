@@ -1,7 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "height": 700,
-  "width": 300,
+  "width": 250,
   "data": {
     "url": "https://raw.githubusercontent.com/maheshsuresh1/3179/main/data/top20_uni.csv"
   },
