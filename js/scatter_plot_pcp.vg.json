@@ -1,6 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-
+  "width": 500,
+  "height": 500,
   "title": "University Total Scores vs. PCP",
   "data": {
     "url": "https://raw.githubusercontent.com/maheshsuresh1/3179/main/data/top5_uni.csv"
